@@ -10,7 +10,7 @@ class SeatsController extends Controller
     public function index(){
         return response()->json([
             'seats' => Seats::all(),
-        ]);
+        ],200);
           
         
     }
@@ -28,7 +28,8 @@ class SeatsController extends Controller
             'row' => request('row'),
         ]);
         return response()->json([
-            'message' => 'Seat created successfully'
+            'message' => 'Seat created successfully',
+            "Seats" => $seat
         ]);
     }
 

@@ -49,7 +49,7 @@ public function store(Request $request)
         'success' => true,
         'message' => 'Movie Created Successfully',
         'data' => $movie,
-        'user' => auth()->user()
+       'user' => auth()->user()
     ], 201);
     }
     catch(Exception $e){

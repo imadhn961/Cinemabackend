@@ -19,11 +19,13 @@ class HallsController extends Controller
         'capacity' => request('capacity'),
     ]);
     return response()->json([
-              'message' => 'Hall created successfully'
-         ]);
+              'message' => 'Hall created successfully',
+              "hall" => $hall
+         ],200);
    }catch(Exception $e){
          return response()->json([
               'message' => 'Hall creation failed'
+
          ]);
    }}
 

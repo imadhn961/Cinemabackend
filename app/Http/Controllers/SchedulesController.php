@@ -58,10 +58,10 @@ class SchedulesController extends Controller
         ]);
         $schedule->update([
             'movie_id' => request('movie_id'),
-            'hall_id' => request('hall_id'),
-            'start' => request('start'),
-              'end ' => request('end'),
-            'price' => request('price'),
+            'hall_id'  => request('hall_id'),
+            'start'    => request('start'),
+              'end '   => request('end'),
+            'price'    => request('price'),
         ]);
 
         return response()->json([
